@@ -12,6 +12,8 @@ exports.findAll = (req, res) => {
 };
 
 exports.create = (req, res) => {
+
+    // Instantiating the Employee class here
     const new_employee = new Employee(req.body);
     //handles null error
     if (req.body.constructor === Object && Object.keys(req.body).length === 0) {
